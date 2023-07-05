@@ -1,0 +1,34 @@
+Name:
+Mobile:
+Email:
+Age:
+Gender:
+Height:
+Weight:
+City:
+Program: Fat2Fit, Aerobics, Zumba, Cardio, Boxing, Yoga
+Fees: 
+
+ShortCut Keys & MVC Tips:
+
+1. prop ==> to create Property ==> public int MyProperty { get; set; }
+
+2. ctor ==> to create Contructor of Class ==> public classname() {}
+
+3. DBset ==> single form convert into plural form (eg: Employee into Employees)
+
+4. (Step-1) ==> Enable Migrations ==> DBContext Class Migration to create Table according to Connection String 
+				  ==> Package Manager Console ==> PM> enable-migrations (command)
+				  ==> it will create Configuration.cs file [ using System.Data.Entity.Migrations ]
+
+   (Step-2) ==> Add Migrations ==> we can add multiple times migration in one project (eg: Table for Employee, Department, etc)
+			       ==> add-migration "InitialSetUp" (command)
+			       ==> will create InitialSetUp.cs file (inside which Table created as per our given values)
+
+   (Step-3) ==> Update DataBase ==> update-database -verbose (command) [ *-verbose = to know whats query is running to create database in background ]
+			        ==> 
+			        ==> will create InitialSetUp.cs file (inside which Table created as per our given values)
+
+5. Create Controller ==> select Models, DBContext, Controller name will generate automatically ==> Add
+
+6. Add Migrations (Again as we have Change the DataBase) ==> add-migration "ValidationAdded" -verbose (command)[ must be unique & not same as previous one ]
